@@ -1,18 +1,12 @@
 <template>
+    <a href="drunkdeerUpgradev1.2_20240802 (1).zip" download>drunkdeerUpgradev1.2_20240802 (1).zipをダウンロードする</a><br>
+  <a href="drunkdeerUpgradev1.2_20240929 (1).zip" download>drunkdeerUpgradev1.2_20240929 (1).zipをダウンロードする</a><br>
   a
   <ul>
-    <li v-for="user in users" :key="user.id">
-      {{ user.name }} ({{ user.email }})
-    </li>
+    <li v-for="user in users" :key="user.id">{{ user.name }}</li>
   </ul>
 </template>
 
 <script setup>
-import { PrismaClient } from '@prisma/client'
-
-const prisma = new PrismaClient()
-
-const users = await prisma.user.findMany()
-
-await prisma.$disconnect()
+const { data: users } = await useFetch('/api/users');
 </script>
