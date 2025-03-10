@@ -6,7 +6,7 @@
 
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL")
+  url      = "mysql://namaixserver_111:nama7272@localhost:3306/namaixserver_test"
 }
 
 generator client {

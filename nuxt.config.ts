@@ -25,12 +25,10 @@ export default defineNuxtConfig({
     '@quasar/extras/ionicons-v4/ionicons-v4.css'
   ],
   runtimeConfig: {
-    // 公開しない環境変数（サーバーサイドのみ）
-    apiSecret: 'secret',
     databaseUrl: process.env.DATABASE_URL,
     // 公開する環境変数（クライアントサイドとサーバーサイド）
-    public: {
-      apiBase: '/api'
-    }
+    // public: {
+    //   apiBase: '/api'
+    // }
   }
 })
