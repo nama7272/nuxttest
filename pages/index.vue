@@ -1,12 +1,19 @@
 <template>
-    <a href="drunkdeerUpgradev1.2_20240802 (1).zip" download>drunkdeerUpgradev1.2_20240802 (1).zipをダウンロードする</a><br>
-  <a href="drunkdeerUpgradev1.2_20240929 (1).zip" download>drunkdeerUpgradev1.2_20240929 (1).zipをダウンロードする</a><br>
-  a
-  <ul>
-    <li v-for="user in users" :key="user.id">{{ user.name }}</li>
-  </ul>
+
+
 </template>
 
 <script setup>
-const { data: users } = await useFetch('/api/users');
+
+useHead({
+  title: "Green Care",
+  link: {
+    rel: "stylesheet",
+    href: "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css",
+    type: "text/css",
+  },
+  script: {
+    src: "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",
+  },
+});
 </script>
