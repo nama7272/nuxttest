@@ -43,6 +43,7 @@
 
 <script setup lang="ts">
 const { data: user } = await useFetch("/api/user");
+console.log(user.value)
 
 const router = useRouter();
 const post = ref({ name: "", email: "" });
