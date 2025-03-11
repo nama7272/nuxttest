@@ -3,7 +3,7 @@ export default {
         name: 'namaipm2test',
         exec_mode: 'cluster',
         instances: 'max',
-        script: './.output/server/index.mjs',
+        script: '/home/namai5/namai5.xsrv.jp/public_html/nuxttest/.output/server',
         args: '',
         env: {
             NODE_ENV: 'production'
