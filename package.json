@@ -4,8 +4,11 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
+    "start": "pm2 start ecosystem.config.js",
+    "reload": "pm2 reload ecosystem.config.js",
+    "stop": "pm2 stop namaipm2test",
+    "delete": "pm2 delete namaipm2test",
     "dev": "nuxt dev",
-    "start": "pm2 start -i max --name namaipm2test .output/server/index.mjs",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
