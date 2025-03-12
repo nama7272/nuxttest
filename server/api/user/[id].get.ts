@@ -1,4 +1,6 @@
-import { PrismaClient } from "@prisma/client";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 export default defineEventHandler(async (event) => {
     const id = parseInt(event.context.params.id);

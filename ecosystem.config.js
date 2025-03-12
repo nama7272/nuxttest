@@ -1,12 +1,13 @@
-export default {
+module.exports = {
     apps: [{
-        name: 'namaipm2test',
+        name: 'test',
         exec_mode: 'cluster',
-        instances: 'max',
-        script: '/home/namai5/namai5.xsrv.jp/public_html/nuxttest/.output/server',
+        instances: 1,
+        script: './.output/server/index.mjs',
         args: '',
         env: {
-            NODE_ENV: 'production'
+            NODE_ENV: 'production',
+            DATABASE_URL: "mysql://namai5_111:nama7272@localhost:3306/namai5_test"
         }
     }]
 };

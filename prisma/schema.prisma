@@ -6,9 +6,15 @@
 
 datasource db {
   provider = "mysql"
-  url      = "mysql://namai5_111:nama7272@localhost:3306/namai5_test"
+  url      = env("DATABASE_URL")
 }
 
 generator client {
   provider = "prisma-client-js"
+}
+
+model User {
+  id    Int     @id @default(autoincrement())
+  email String  @unique
+  name  String?
 }
